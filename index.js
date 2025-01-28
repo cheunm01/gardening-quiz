@@ -2,15 +2,32 @@
 // when the user clicks the button then it is submitted to the server
 // happy path: user selects 4 flower and clicks submit
 // sad path 1: user does not select a flower and clicks submit - error message
-// sad path 2: user onlys selects one or less than for flower and clicks submit
+// sad path 2: user onlys selects one or less than for flower and clicks submit - error message
+// sad path 3: user selects more than 4 flowers and clicks submit - error message
+
+
+// Task List
+// create list of json data of the plants
+// create onsumbit button -> console.log('submit button clicked')
 
 const daisy = document.getElementById('daisy');
-
+const formSubmitButton = document.getElementById('submit');
 const formElements = document.querySelectorAll('input[type="checkbox"]');
 
-export let flowerList = formElements.forEach((flower) => {
-    console.log(flower);
-    console.log(flower.checked);
-})
+formSubmitButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    formSubmit();
+});
 
-console.log(flowerList);
+
+
+function formSubmit() {
+  let data = [];
+  formElements.forEach((flower) => {
+      if(flower.checked === true) {
+          console.log(flower);
+          data.push(flower.value);
+      }
+  });
+  return data;
+}
