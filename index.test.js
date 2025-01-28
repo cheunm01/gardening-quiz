@@ -1,5 +1,4 @@
-// import { describe, expect, test } from '@jest/globals';
-
+import {index} from './index';
 describe('poll section', () => {
   test('should return a list of poll options', () => {
     expect([]).toEqual([]);
