@@ -9,18 +9,35 @@
     <h1>Gardening Program</h1>
     <div id="app">
         <h1>Welcome to the Gardening Show</h1>
-        <div id="quiz-section">
+        <div id="poll-container">
             <h2>What type of gardening are you interested in?</h2>
-            <ul>
-                <li>Daisy</li>
-                <li>Poppy</li>
-                <li>Iris</li>
-                <li>Violet</li>
-                <li>Lily</li>
-            </ul>
+            <form id="poll-form">
+                <input type="checkbox" id="daisy" name="daisy" value="daisy">
+                <label for="daisy">Daisy</label>
+                <input type="checkbox" id="poppy" name="poppy" value="poppy">
+                <label for="poppy">Poppy</label>
+                <input type="checkbox" id="iris" name="iris" value="iris">
+                <label for="iris">Iris</label>
+                <input type="checkbox" id="violet" name="violet" value="violet">
+                <label for="violet">Violet</label>
+                <input type="checkbox" id="lily" name="lily" value="lily">
+                <label for="lily">Lily</label>
+                <input type="checkbox" id="sunflower" name="sunflower" value="sunflower">
+                <label for="sunflower">Sunflower</label>
+                <input type="checkbox" id="orchid" name="orchid" value="orchid">
+                <label for="orchid">Orchid</label>
+                <input type="checkbox" id="hyacinth" name="hyacinth" value="hyacinth">
+                <label for="hyacinth">Hyacinth</label>
+                <input type="checkbox" id="ulip" name="tulip" value="tulip">
+                <label for="tulip">Tulip</label>
+                <input type="checkbox" id="poney" name="poney" value="poney">
+                <label for="poney">Poney</label>
+                <input type="submit" value="Submit">
+            </form>
         </div>
-        <div id="results">
+        <div id="poll-results">
             <h2>These are the results of the quiz</h2>
+            <div></div>
         </div>
     </div>
     <script src="./index.js"></script>
